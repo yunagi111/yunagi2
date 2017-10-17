@@ -21,7 +21,9 @@ import java.io.OutputStream;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -402,7 +404,7 @@ public class KitchenSinkController {
     public static void cal1(String[] args) throws Exception{
 		 Calendar startCal = Calendar.getInstance();
 	        startCal.set(Calendar.HOUR_OF_DAY, 17);
-	        startCal.set(Calendar.MINUTE, 15);
+	        startCal.set(Calendar.MINUTE, 25);
 	        startCal.set(Calendar.SECOND, 0);
 		TimerTask task = new TimerTask() {
 	        public void run() {
@@ -416,7 +418,7 @@ public class KitchenSinkController {
     	String imageUrl = createUri("/static/buttons/1040.jpg");
 		 Calendar startCal = Calendar.getInstance();
 	        startCal.set(Calendar.HOUR_OF_DAY, 17);
-	        startCal.set(Calendar.MINUTE, 15);
+	        startCal.set(Calendar.MINUTE, 25);
 	        startCal.set(Calendar.SECOND, 30);
 		TimerTask task = new TimerTask() {
 	        public void run() {
@@ -444,7 +446,7 @@ public class KitchenSinkController {
     	String imageUrl = createUri("/static/buttons/1040.jpg");
 		 Calendar startCal = Calendar.getInstance();
 	        startCal.set(Calendar.HOUR_OF_DAY, 17);
-	        startCal.set(Calendar.MINUTE, 16);
+	        startCal.set(Calendar.MINUTE, 26);
 	        startCal.set(Calendar.SECOND, 0);
 		TimerTask task = new TimerTask() {
 	        public void run() {
@@ -471,7 +473,7 @@ public class KitchenSinkController {
     public static void cal4(String[] args) throws Exception{
 		 Calendar startCal = Calendar.getInstance();
 	        startCal.set(Calendar.HOUR_OF_DAY, 17);
-	        startCal.set(Calendar.MINUTE, 16);
+	        startCal.set(Calendar.MINUTE, 26);
 	        startCal.set(Calendar.SECOND, 30);
 		TimerTask task = new TimerTask() {
 	        public void run() {
@@ -485,7 +487,7 @@ public class KitchenSinkController {
     	String imageUrl = createUri("/static/buttons/1040.jpg");
 		 Calendar startCal = Calendar.getInstance();
 	        startCal.set(Calendar.HOUR_OF_DAY, 17);
-	        startCal.set(Calendar.MINUTE, 17);
+	        startCal.set(Calendar.MINUTE, 27);
 	        startCal.set(Calendar.SECOND, 0);
 		TimerTask task = new TimerTask() {
 	        public void run() {
@@ -513,7 +515,7 @@ public class KitchenSinkController {
     	String imageUrl = createUri("/static/buttons/1040.jpg");
 		 Calendar startCal = Calendar.getInstance();
 	        startCal.set(Calendar.HOUR_OF_DAY, 17);
-	        startCal.set(Calendar.MINUTE, 17);
+	        startCal.set(Calendar.MINUTE, 27);
 	        startCal.set(Calendar.SECOND, 30);
 		TimerTask task = new TimerTask() {
 	        public void run() {
@@ -541,7 +543,7 @@ public class KitchenSinkController {
     	String imageUrl = createUri("/static/buttons/1040.jpg");
 		 Calendar startCal = Calendar.getInstance();
 	        startCal.set(Calendar.HOUR_OF_DAY, 17);
-	        startCal.set(Calendar.MINUTE, 18);
+	        startCal.set(Calendar.MINUTE, 28);
 	        startCal.set(Calendar.SECOND, 0);
 		TimerTask task = new TimerTask() {
 	        public void run() {
