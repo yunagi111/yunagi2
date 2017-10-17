@@ -274,6 +274,7 @@ public class KitchenSinkController {
                     lineMessagingClient.leaveRoom(((RoomSource) source).getRoomId()).get();
                 } else {
                     this.replyText(replyToken, "Bot can't leave from 1:1 chat");
+                    this.replyText(replyToken, "Bot can't leave from 1:1 chat");
                 }
                 break;
             }
