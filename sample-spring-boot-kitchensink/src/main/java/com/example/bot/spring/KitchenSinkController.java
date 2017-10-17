@@ -25,7 +25,7 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Timer;
+import java.util.concurrent.TimeUnit;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
@@ -290,15 +290,11 @@ public class KitchenSinkController {
             case "start": {
             	int cnt = 0;
             	String imageUrl = createUri("/static/buttons/1040.jpg");
-            	TimerTask task = new MyTask();
-                Timer timer = new Timer("myTimer");
-                for(cnt=0;cnt<40;cnt++){
-                	timer.schedule(task, TimeUnit.SECONDS.toMillis(3)); //3秒遅延させる
+                for(cnt=0;cnt<20;cnt++){
                 	TimeUnit.SECONDS.sleep(5);
-                	timer.cancel();
-                	if(cnt==5){
+                	if(cnt==2){
                 		this.replyText(replyToken, "7月に入りました");
-                	}else if(cnt==10){
+                	}else if(cnt==4){
                 		this.replyText(replyToken, "7月の商品紹介です");
                 		ImageCarouselTemplate imageCarouselTemplate1 = new ImageCarouselTemplate(
                                 Arrays.asList(
@@ -315,7 +311,7 @@ public class KitchenSinkController {
                                                         "https://line.me")
                                         )
                                 ));
-                	}else if(cnt==15){
+                	}else if(cnt==6){
                 		this.replyText(replyToken, "7月の商品紹介です");
                 		ImageCarouselTemplate imageCarouselTemplate2 = new ImageCarouselTemplate(
                                 Arrays.asList(
@@ -332,9 +328,9 @@ public class KitchenSinkController {
                                                         "https://line.me")
                                         )
                                 ));
-                	}else if(cnt==20){
+                	}else if(cnt==8){
                 		this.replyText(replyToken, "8月に入りました");
-                	}else if(cnt==25){
+                	}else if(cnt==10){
                 		this.replyText(replyToken, "8月の商品紹介です");
                 		ImageCarouselTemplate imageCarouselTemplate3 = new ImageCarouselTemplate(
                                 Arrays.asList(
@@ -351,7 +347,7 @@ public class KitchenSinkController {
                                                         "https://line.me")
                                         )
                                 ));
-                	}else if(cnt==30){
+                	}else if(cnt==12){
                 		this.replyText(replyToken, "8月の商品紹介です");
                 		ImageCarouselTemplate imageCarouselTemplate4 = new ImageCarouselTemplate(
                                 Arrays.asList(
@@ -368,7 +364,7 @@ public class KitchenSinkController {
                                                         "https://line.me")
                                         )
                                 ));
-                	}else if(cnt==35){
+                	}else if(cnt==14){
                 		this.replyText(replyToken, "8月の商品紹介です");
                 		ImageCarouselTemplate imageCarouselTemplate5 = new ImageCarouselTemplate(
                                 Arrays.asList(
