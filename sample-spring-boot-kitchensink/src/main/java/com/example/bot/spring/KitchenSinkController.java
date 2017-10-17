@@ -292,9 +292,10 @@ public class KitchenSinkController {
             	int cnt = 0;
             	String imageUrl = createUri("/static/buttons/1040.jpg");
                 for(cnt=0;cnt<20;cnt++){
-                	TimeUnit.SECONDS.sleep(5);
+                	TimeUnit.SECONDS.sleep(2);
                 	if(cnt==2){
                 		this.replyText(replyToken, "7月に入りました");
+                        this.replyText(replyToken, "7月に入りました");
                 	}else if(cnt==4){
                 		this.replyText(replyToken, "7月の商品紹介です");
                 		ImageCarouselTemplate imageCarouselTemplate1 = new ImageCarouselTemplate(
