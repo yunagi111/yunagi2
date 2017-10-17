@@ -288,105 +288,6 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "start": {
-            	int cnt = 0;
-            	String imageUrl = createUri("/static/buttons/1040.jpg");
-                for(cnt=0;cnt<20;cnt++){
-                	TimeUnit.SECONDS.sleep(2);
-                	if(cnt==2){
-                		this.replyText(replyToken, "7月に入りました");
-                        this.replyText(replyToken, "7月に入りました");
-                	}else if(cnt==4){
-                		this.replyText(replyToken, "7月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate1 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}else if(cnt==6){
-                		this.replyText(replyToken, "7月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate2 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}else if(cnt==8){
-                		this.replyText(replyToken, "8月に入りました");
-                	}else if(cnt==10){
-                		this.replyText(replyToken, "8月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate3 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}else if(cnt==12){
-                		this.replyText(replyToken, "8月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate4 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}else if(cnt==14){
-                		this.replyText(replyToken, "8月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate5 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}
-                }
-                break;
-            }    
             case "carousel": {
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
@@ -498,7 +399,172 @@ public class KitchenSinkController {
                 break;
         }
     }
-
+    public static void cal1(String[] args) throws Exception{
+		 Calendar startCal = Calendar.getInstance();
+	        startCal.set(Calendar.HOUR_OF_DAY, 17);
+	        startCal.set(Calendar.MINUTE, 15);
+	        startCal.set(Calendar.SECOND, 0);
+		TimerTask task = new TimerTask() {
+	        public void run() {
+	        	this.replyText(replyToken, "7月に入りました");
+	        }
+	    };
+       Timer timer = new Timer();
+       timer.schedule(task, startCal.getTime());;
+   }
+    public static void cal2(String[] args) throws Exception{
+    	String imageUrl = createUri("/static/buttons/1040.jpg");
+		 Calendar startCal = Calendar.getInstance();
+	        startCal.set(Calendar.HOUR_OF_DAY, 17);
+	        startCal.set(Calendar.MINUTE, 15);
+	        startCal.set(Calendar.SECOND, 30);
+		TimerTask task = new TimerTask() {
+	        public void run() {
+	        	ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                )
+                        ));
+	        }
+	    };
+      Timer timer = new Timer();
+      timer.schedule(task, startCal.getTime());;
+  }
+    public static void cal3(String[] args) throws Exception{
+    	String imageUrl = createUri("/static/buttons/1040.jpg");
+		 Calendar startCal = Calendar.getInstance();
+	        startCal.set(Calendar.HOUR_OF_DAY, 17);
+	        startCal.set(Calendar.MINUTE, 16);
+	        startCal.set(Calendar.SECOND, 0);
+		TimerTask task = new TimerTask() {
+	        public void run() {
+	        	ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                       Arrays.asList(
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               ),
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               ),
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               )
+                       ));
+	        }
+	    };
+      Timer timer = new Timer();
+      timer.schedule(task, startCal.getTime());;
+  }
+    public static void cal4(String[] args) throws Exception{
+		 Calendar startCal = Calendar.getInstance();
+	        startCal.set(Calendar.HOUR_OF_DAY, 17);
+	        startCal.set(Calendar.MINUTE, 16);
+	        startCal.set(Calendar.SECOND, 30);
+		TimerTask task = new TimerTask() {
+	        public void run() {
+	        	this.replyText(replyToken, "8月に入りました");
+	        }
+	    };
+      Timer timer = new Timer();
+      timer.schedule(task, startCal.getTime());;
+  }
+    public static void cal5(String[] args) throws Exception{
+    	String imageUrl = createUri("/static/buttons/1040.jpg");
+		 Calendar startCal = Calendar.getInstance();
+	        startCal.set(Calendar.HOUR_OF_DAY, 17);
+	        startCal.set(Calendar.MINUTE, 17);
+	        startCal.set(Calendar.SECOND, 0);
+		TimerTask task = new TimerTask() {
+	        public void run() {
+	        	ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                       Arrays.asList(
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               ),
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               ),
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               )
+                       ));
+	        }
+	    };
+      Timer timer = new Timer();
+      timer.schedule(task, startCal.getTime());;
+  }
+    public static void cal6(String[] args) throws Exception{
+    	String imageUrl = createUri("/static/buttons/1040.jpg");
+		 Calendar startCal = Calendar.getInstance();
+	        startCal.set(Calendar.HOUR_OF_DAY, 17);
+	        startCal.set(Calendar.MINUTE, 17);
+	        startCal.set(Calendar.SECOND, 30);
+		TimerTask task = new TimerTask() {
+	        public void run() {
+	        	ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                       Arrays.asList(
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               ),
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               ),
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               )
+                       ));
+	        }
+	    };
+      Timer timer = new Timer();
+      timer.schedule(task, startCal.getTime());;
+  }
+    public static void cal7(String[] args) throws Exception{
+    	String imageUrl = createUri("/static/buttons/1040.jpg");
+		 Calendar startCal = Calendar.getInstance();
+	        startCal.set(Calendar.HOUR_OF_DAY, 17);
+	        startCal.set(Calendar.MINUTE, 18);
+	        startCal.set(Calendar.SECOND, 0);
+		TimerTask task = new TimerTask() {
+	        public void run() {
+	        	ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                       Arrays.asList(
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               ),
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               ),
+                               new ImageCarouselColumn(imageUrl,
+                                       new URIAction("Goto line.me",
+                                               "https://line.me")
+                               )
+                       ));
+	        }
+	    };
+      Timer timer = new Timer();
+      timer.schedule(task, startCal.getTime());;
+  }
     private static String createUri(String path) {
         return ServletUriComponentsBuilder.fromCurrentContextPath()
                                           .path(path).build()
