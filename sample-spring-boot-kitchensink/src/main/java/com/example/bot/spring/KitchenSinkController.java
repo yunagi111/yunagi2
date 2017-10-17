@@ -286,6 +286,108 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "start": {
+            	int cnt = 0;
+            	String imageUrl = createUri("/static/buttons/1040.jpg");
+            	TimerTask task = new MyTask();
+                Timer timer = new Timer("myTimer");
+                for(cnt=0;cnt<40;cnt++){
+                	timer.schedule(task, TimeUnit.SECONDS.toMillis(3)); //3秒遅延させる
+                	TimeUnit.SECONDS.sleep(5);
+                	timer.cancel();
+                	if(cnt==5){
+                		this.replyText(replyToken, "7月に入りました");
+                	}else if(cnt==10){
+                		this.replyText(replyToken, "7月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate1 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}else if(cnt==15){
+                		this.replyText(replyToken, "7月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate2 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}else if(cnt==20){
+                		this.replyText(replyToken, "8月に入りました");
+                	}else if(cnt==25){
+                		this.replyText(replyToken, "8月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate3 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}else if(cnt==30){
+                		this.replyText(replyToken, "8月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate4 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}else if(cnt==35){
+                		this.replyText(replyToken, "8月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate5 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}
+                }
+                break;
+            }    
             case "carousel": {
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
