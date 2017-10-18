@@ -282,43 +282,53 @@ public class KitchenSinkController {
             }
             case "b": {
                 String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                )
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                               new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
             case "c": {
                 String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                )
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                               new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -328,64 +338,79 @@ public class KitchenSinkController {
             }
             case "e": {
                 String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                )
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                               new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
             case "f": {
                 String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                )
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                               new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
             case "g": {
                 String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                        new URIAction("Goto line.me",
-                                                "https://line.me")
-                                )
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                               new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "08000000000"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                )),
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
