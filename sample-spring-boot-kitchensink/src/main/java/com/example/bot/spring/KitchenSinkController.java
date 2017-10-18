@@ -297,6 +297,8 @@ public class KitchenSinkController {
                                                 "https://line.me")
                                 )
                         ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "c": {
@@ -316,6 +318,8 @@ public class KitchenSinkController {
                                                 "https://line.me")
                                 )
                         ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "d": {
@@ -339,6 +343,8 @@ public class KitchenSinkController {
                                                 "https://line.me")
                                 )
                         ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "f": {
@@ -358,6 +364,8 @@ public class KitchenSinkController {
                                                 "https://line.me")
                                 )
                         ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "g": {
@@ -377,6 +385,8 @@ public class KitchenSinkController {
                                                 "https://line.me")
                                 )
                         ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "confirm": {
