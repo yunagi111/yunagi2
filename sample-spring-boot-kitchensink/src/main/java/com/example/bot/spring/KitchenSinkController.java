@@ -289,24 +289,21 @@ public class KitchenSinkController {
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/white01.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                        
                                 )),
                                 new CarouselColumn(imageUrl, "薬用サクセスストーリー", "ダイズエキス・ローヤルゼリーエキス・ヒアルロン酸をベースに、天然保湿成分を加えた弱酸性の薬用化粧品。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/white01.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                        
                                 )),
                                new CarouselColumn(imageUrl, "薬用サクセスストーリー", "ダイズエキス・ローヤルゼリーエキス・ヒアルロン酸をベースに、天然保湿成分を加えた弱酸性の薬用化粧品。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/white01.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                      
                                 )),
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
@@ -321,24 +318,21 @@ public class KitchenSinkController {
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/lotion01.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                        
                                 )),
                                 new CarouselColumn(imageUrl, "ハイローション", "さっぱりとした使いごこちで、お肌にすばやく浸透（角質層）。しっかりと潤いを与えます。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/lotion01.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                       
                                 )),
                                new CarouselColumn(imageUrl, "ハイローション", "さっぱりとした使いごこちで、お肌にすばやく浸透（角質層）。しっかりと潤いを与えます。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/lotion01.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                      
                                 )),
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
@@ -357,24 +351,21 @@ public class KitchenSinkController {
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream05.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                        
                                 )),
                                 new CarouselColumn(imageUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream05.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                      
                                 )),
                                new CarouselColumn(imageUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream05.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                      
                                 )),
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
@@ -389,24 +380,21 @@ public class KitchenSinkController {
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream01.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                        
                                 )),
                                 new CarouselColumn(imageUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream01.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                        
                                 )),
                                new CarouselColumn(imageUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream01.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                        
                                 )),
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
