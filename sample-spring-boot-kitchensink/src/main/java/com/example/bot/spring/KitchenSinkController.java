@@ -281,7 +281,7 @@ public class KitchenSinkController {
                 break;
             }
             case "b": {
-                String imageUrl = createUri("/static/buttons/1040.jpg");
+                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
@@ -302,7 +302,7 @@ public class KitchenSinkController {
                 break;
             }
             case "c": {
-                String imageUrl = createUri("/static/buttons/1040.jpg");
+                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
@@ -327,7 +327,7 @@ public class KitchenSinkController {
                 break;
             }
             case "e": {
-                String imageUrl = createUri("/static/buttons/1040.jpg");
+                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
@@ -348,7 +348,7 @@ public class KitchenSinkController {
                 break;
             }
             case "f": {
-                String imageUrl = createUri("/static/buttons/1040.jpg");
+                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
@@ -369,7 +369,7 @@ public class KitchenSinkController {
                 break;
             }
             case "g": {
-                String imageUrl = createUri("/static/buttons/1040.jpg");
+                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
