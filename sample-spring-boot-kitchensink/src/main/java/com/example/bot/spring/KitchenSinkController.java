@@ -304,7 +304,8 @@ public class KitchenSinkController {
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/white01.html")
                                       
-                                )),
+                                ))
+                            ));
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
@@ -333,7 +334,8 @@ public class KitchenSinkController {
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/lotion01.html")
                                       
-                                )),
+                                ))
+                            ));
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
@@ -366,7 +368,8 @@ public class KitchenSinkController {
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream05.html")
                                       
-                                )),
+                                ))
+                            ));
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
@@ -395,7 +398,8 @@ public class KitchenSinkController {
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream01.html")
                                         
-                                )),
+                                ))
+                            ));
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
@@ -409,25 +413,23 @@ public class KitchenSinkController {
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/lotion02.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                        
                                 )),
                                 new CarouselColumn(imageUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/lotion02.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
+                                      
                                 )),
                                new CarouselColumn(imageUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/lotion02.html")
-                                        new PostbackAction("Say hello1",
-                                                           "hello こんにちは")
-                                )),
+                                      
+                                ))
+                            ));
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
