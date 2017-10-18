@@ -21,13 +21,10 @@ import java.io.OutputStream;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Calendar;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
@@ -276,7 +273,6 @@ public class KitchenSinkController {
                     lineMessagingClient.leaveRoom(((RoomSource) source).getRoomId()).get();
                 } else {
                     this.replyText(replyToken, "Bot can't leave from 1:1 chat");
-                    this.replyText(replyToken, "Bot can't leave from 1:1 chat");
                 }
                 break;
             }
@@ -393,6 +389,27 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
+            case "buttons": {
+                String imageUrl = createUri("/static/buttons/1040.jpg");
+                ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
+                        imageUrl,
+                        "My button sample",
+                        "Hello, my button",
+                        Arrays.asList(
+                                new URIAction("Go to line.me",
+                                              "https://line.me"),
+                                new PostbackAction("Say hello1",
+                                                   "hello こんにちは"),
+                                new PostbackAction("言 hello2",
+                                                   "hello こんにちは",
+                                                   "hello こんにちは"),
+                                new MessageAction("Say message",
+                                                  "Rice=米")
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
             case "carousel": {
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
@@ -504,7 +521,7 @@ public class KitchenSinkController {
                 break;
         }
     }
-    
+
     private static String createUri(String path) {
         return ServletUriComponentsBuilder.fromCurrentContextPath()
                                           .path(path).build()
