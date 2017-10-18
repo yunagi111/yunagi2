@@ -281,24 +281,28 @@ public class KitchenSinkController {
                 break;
             }
             case "b": {
-                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
+                String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+                String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+                String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
+                String successUrl = createUri("/static/buttons/11VjyV6RZDL.jpg");
+                String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(imageUrl, "薬用サクセスストーリー", "ダイズエキス・ローヤルゼリーエキス・ヒアルロン酸をベースに、天然保湿成分を加えた弱酸性の薬用化粧品。", Arrays.asList(
+                                new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/white01.html")
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
                                         
                                 )),
-                                new CarouselColumn(imageUrl, "薬用サクセスストーリー", "ダイズエキス・ローヤルゼリーエキス・ヒアルロン酸をベースに、天然保湿成分を加えた弱酸性の薬用化粧品。", Arrays.asList(
+                                 new CarouselColumn(softUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/white01.html")
+                                                "http://www.ionkesho.jp/products/list/lotion02.html")
                                         
                                 )),
-                               new CarouselColumn(imageUrl, "薬用サクセスストーリー", "ダイズエキス・ローヤルゼリーエキス・ヒアルロン酸をベースに、天然保湿成分を加えた弱酸性の薬用化粧品。", Arrays.asList(
+                               new CarouselColumn(successUrl, "薬用サクセスストーリー", "ダイズエキス・ローヤルゼリーエキス・ヒアルロン酸をベースに、天然保湿成分を加えた弱酸性の薬用化粧品。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
@@ -311,24 +315,28 @@ public class KitchenSinkController {
                 break;
             }
             case "c": {
-                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
+                String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+                String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+                String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
+                String successUrl = createUri("/static/buttons/11VjyV6RZDL.jpg");
+                String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(imageUrl, "ハイローション", "さっぱりとした使いごこちで、お肌にすばやく浸透（角質層）。しっかりと潤いを与えます。", Arrays.asList(
+                                new CarouselColumn(successUrl, "薬用サクセスストーリー", "ダイズエキス・ローヤルゼリーエキス・ヒアルロン酸をベースに、天然保湿成分を加えた弱酸性の薬用化粧品。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/lotion01.html")
+                                                "http://www.ionkesho.jp/products/list/white01.html")
                                         
                                 )),
-                                new CarouselColumn(imageUrl, "ハイローション", "さっぱりとした使いごこちで、お肌にすばやく浸透（角質層）。しっかりと潤いを与えます。", Arrays.asList(
+                                new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/lotion01.html")
-                                       
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                        
                                 )),
-                               new CarouselColumn(imageUrl, "ハイローション", "さっぱりとした使いごこちで、お肌にすばやく浸透（角質層）。しっかりと潤いを与えます。", Arrays.asList(
+                               new CarouselColumn(higtUrl, "ハイローション", "さっぱりとした使いごこちで、お肌にすばやく浸透（角質層）。しっかりと潤いを与えます。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
@@ -345,24 +353,28 @@ public class KitchenSinkController {
                 break;
             }
             case "e": {
-                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
+                String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+                String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+                String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
+                String successUrl = createUri("/static/buttons/11VjyV6RZDL.jpg");
+                String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(imageUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
+                                new CarouselColumn(higtUrl, "ハイローション", "さっぱりとした使いごこちで、お肌にすばやく浸透（角質層）。しっかりと潤いを与えます。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                                "http://www.ionkesho.jp/products/list/lotion01.html")
                                         
                                 )),
-                                new CarouselColumn(imageUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
+                                new CarouselColumn(softUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/cream05.html")
-                                      
+                                                "http://www.ionkesho.jp/products/list/lotion02.html")
+                                        
                                 )),
-                               new CarouselColumn(imageUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
+                               new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
@@ -375,24 +387,28 @@ public class KitchenSinkController {
                 break;
             }
             case "f": {
-                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
+                String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+                String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+                String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
+                String successUrl = createUri("/static/buttons/11VjyV6RZDL.jpg");
+                String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(imageUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
+                                new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/cream01.html")
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
                                         
                                 )),
-                                new CarouselColumn(imageUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
+                                new CarouselColumn(softUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/cream01.html")
+                                                "http://www.ionkesho.jp/products/list/lotion02.html")
                                         
                                 )),
-                               new CarouselColumn(imageUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
+                               new CarouselColumn(newRoyalUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
@@ -405,24 +421,28 @@ public class KitchenSinkController {
                 break;
             }
             case "g": {
-                String imageUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
+                String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+                String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+                String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
+                String successUrl = createUri("/static/buttons/11VjyV6RZDL.jpg");
+                String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(imageUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
+                                 new CarouselColumn(newRoyalUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/lotion02.html")
+                                                "http://www.ionkesho.jp/products/list/cream01.html")
                                         
                                 )),
-                                new CarouselColumn(imageUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
+                                new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
-                                                "http://www.ionkesho.jp/products/list/lotion02.html")
-                                      
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                        
                                 )),
-                               new CarouselColumn(imageUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
+                               new CarouselColumn(softUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
