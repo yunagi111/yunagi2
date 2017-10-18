@@ -280,6 +280,109 @@ public class KitchenSinkController {
                 }
                 break;
             }
+            case "a": {
+                this.replyText(replyToken, "7月にはいりました。");
+                break;
+            }
+            case "b": {
+                String imageUrl = createUri("/static/buttons/1040.jpg");
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                )
+                        ));
+                break;
+            }
+            case "c": {
+                String imageUrl = createUri("/static/buttons/1040.jpg");
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                )
+                        ));
+                break;
+            }
+            case "d": {
+                this.replyText(replyToken, "8月にはいりました。");
+                break;
+            }
+            case "e": {
+                String imageUrl = createUri("/static/buttons/1040.jpg");
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                )
+                        ));
+                break;
+            }
+            case "f": {
+                String imageUrl = createUri("/static/buttons/1040.jpg");
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                )
+                        ));
+                break;
+            }
+            case "g": {
+                String imageUrl = createUri("/static/buttons/1040.jpg");
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                        new URIAction("Goto line.me",
+                                                "https://line.me")
+                                )
+                        ));
+                break;
+            }
             case "confirm": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "Do it?",
