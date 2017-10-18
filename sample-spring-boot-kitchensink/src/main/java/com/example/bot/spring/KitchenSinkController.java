@@ -302,7 +302,8 @@ public class KitchenSinkController {
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream05.html")
                                 )),
-                
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "c": {
@@ -327,7 +328,8 @@ public class KitchenSinkController {
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream05.html")
                                 )),
-                
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "d": {
@@ -356,7 +358,8 @@ public class KitchenSinkController {
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream05.html")
                                 )),
-                
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "f": {
@@ -381,7 +384,8 @@ public class KitchenSinkController {
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream05.html")
                                 )),
-              
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "g": {
@@ -406,7 +410,8 @@ public class KitchenSinkController {
                                         new URIAction("商品ページ",
                                                 "http://www.ionkesho.jp/products/list/cream05.html")
                                 )),
-                
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "confirm": {
