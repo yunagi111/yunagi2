@@ -276,11 +276,11 @@ public class KitchenSinkController {
                 }
                 break;
             }
-            case "a": {
+            case "A": {
                 this.replyText(replyToken, "7月にはいりました。");
                 break;
             }
-            case "b": {
+            case "B": {
                 String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
                 String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
                 String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
@@ -314,7 +314,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "c": {
+            case "C": {
                 String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
                 String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
                 String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
@@ -348,11 +348,11 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "d": {
+            case "D": {
                 this.replyText(replyToken, "8月にはいりました。");
                 break;
             }
-            case "e": {
+            case "E": {
                 String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
                 String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
                 String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
@@ -386,7 +386,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "f": {
+            case "F": {
                 String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
                 String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
                 String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
@@ -420,7 +420,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "g": {
+            case "G": {
                 String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
                 String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
                 String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
@@ -429,6 +429,65 @@ public class KitchenSinkController {
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                  new CarouselColumn(newRoyalUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream01.html")
+                                        
+                                )),
+                                new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                        
+                                )),
+                               new CarouselColumn(softUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/lotion02.html")
+                                      
+                                ))
+                            ));
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "1": {
+                this.replyText(replyToken, "購入ありがとうございます");
+                break;
+            }
+            case "2": {
+                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
+                        "ご購入いただきました商品の使い心地はいかがでしょうか?",
+                        new MessageAction("良い", "良い"),
+                        new MessageAction("悪い", "悪い")
+                );
+                TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "3": {
+                this.replyText(replyToken, "ご回答ありがとうございます！");
+                break;
+            }
+            case "4": {
+                String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+                String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+                String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
+                String successUrl = createUri("/static/buttons/11VjyV6RZDL.jpg");
+                String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
+                        Arrays.asList(
+                                new CarouselColumn("そろそろ商品が少なくなってきていませんか？", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("ホームページ",
+                                                "http://www.ionkesho.jp.html")
+                                        
+                                )),
+                                new CarouselColumn(newRoyalUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("商品ページ",
