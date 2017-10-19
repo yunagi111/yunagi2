@@ -468,8 +468,54 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "3": {
+            case "良い": {
                 this.replyText(replyToken, "ご回答ありがとうございます！");
+                break;
+            }
+            case "悪い": {
+                this.replyText(replyToken, "ご回答ありがとうございます！");
+                break;
+            }
+            case "3": {
+                String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+                String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+                String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
+                String successUrl = createUri("/static/buttons/11VjyV6RZDL.jpg");
+                String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
+                String homeUrl = createUri("/static/buttons/images.jpg");
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
+                        Arrays.asList(
+                                new CarouselColumn(homeUrl,"商品紹介","そろそろ商品が残り少なくなってきていませんか？", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("ホームページ",
+                                                "http://www.ionkesho.jp")
+                                        
+                                )),
+                                new CarouselColumn(newRoyalUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream01.html")
+                                        
+                                )),
+                                new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                        
+                                )),
+                               new CarouselColumn(softUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/lotion02.html")
+                                      
+                                ))
+                            ));
+                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             case "4": {
@@ -478,13 +524,14 @@ public class KitchenSinkController {
                 String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
                 String successUrl = createUri("/static/buttons/11VjyV6RZDL.jpg");
                 String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
+                String homeUrl = createUri("/static/buttons/images.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn("そろそろ商品が少なくなってきていませんか？", Arrays.asList(
+                                new CarouselColumn(homeUrl,"新しい商品","おすすめの商品の紹介です", Arrays.asList(
                                         new URIAction("電話をかける",
                                                       "tel:090XXXX6238"),
                                         new URIAction("ホームページ",
-                                                "http://www.ionkesho.jp.html")
+                                                "http://www.ionkesho.jp")
                                         
                                 )),
                                 new CarouselColumn(newRoyalUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
