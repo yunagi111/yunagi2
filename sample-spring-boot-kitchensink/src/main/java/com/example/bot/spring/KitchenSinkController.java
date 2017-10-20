@@ -30,6 +30,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 import com.linecorp.bot.model.action.DatetimePickerAction;
 import com.linecorp.bot.model.message.template.*;
@@ -41,6 +42,7 @@ import com.google.common.io.ByteStreams;
 import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.client.MessageContentResponse;
 import com.linecorp.bot.model.ReplyMessage;
+import com.linecorp.bot.model.PushMessage;
 import com.linecorp.bot.model.action.MessageAction;
 import com.linecorp.bot.model.action.PostbackAction;
 import com.linecorp.bot.model.action.URIAction;
@@ -214,6 +216,10 @@ public class KitchenSinkController {
         }
         this.reply(replyToken, new TextMessage(message));
     }
+    
+    private void push(@NonNull String to, @NonNull Message message) {
+        push(to, Collections.singletonList(message));
+    }
 
     private void handleHeavyContent(String replyToken, String messageId,
                                     Consumer<MessageContentResponse> messageConsumer) {
@@ -275,6 +281,105 @@ public class KitchenSinkController {
                     lineMessagingClient.leaveRoom(((RoomSource) source).getRoomId()).get();
                 } else {
                     this.replyText(replyToken, "Bot can't leave from 1:1 chat");
+                }
+                break;
+            }
+            case "start": {
+            	int cnt = 0;
+            	String imageUrl = createUri("/static/buttons/1040.jpg");
+                String userId = event.getSource().getUserId();
+                for(cnt=0;cnt<40;cnt++){
+                	TimeUnit.SECONDS.sleep(1);
+                	if(cnt==5){
+                		this.push(userId, "7月に入りました");
+                	}else if(cnt==10){
+                		this.push(userId, "7月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate1 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}else if(cnt==15){
+                		this.push(userId, "7月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate2 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}else if(cnt==20){
+                		this.push(userId, "8月に入りました");
+                	}else if(cnt==25){
+                		this.push(userId, "8月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate3 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}else if(cnt==30){
+                		this.push(userId, "8月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate4 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}else if(cnt==35){
+                		this.push(userId, "8月の商品紹介です");
+                		ImageCarouselTemplate imageCarouselTemplate5 = new ImageCarouselTemplate(
+                                Arrays.asList(
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        ),
+                                        new ImageCarouselColumn(imageUrl,
+                                                new URIAction("Goto line.me",
+                                                        "https://line.me")
+                                        )
+                                ));
+                	}
                 }
                 break;
             }
