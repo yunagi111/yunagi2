@@ -28,6 +28,8 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import com.linecorp.bot.model.action.DatetimePickerAction;
 import com.linecorp.bot.model.message.template.*;
@@ -277,7 +279,7 @@ public class KitchenSinkController {
                 break;
             }
             case "A": {
-                this.replyText(replyToken, "7月にはいりました。");
+                this.replyText(replyToken, "まだまだ雨の続くじめじめとした季節ですが、いかがお過ごしでしょうか？");
                 break;
             }
             case "B": {
@@ -349,7 +351,7 @@ public class KitchenSinkController {
                 break;
             }
             case "D": {
-                this.replyText(replyToken, "8月にはいりました。");
+                this.replyText(replyToken, "梅雨も明け、いよいよ夏本番となってまいりましたが、日焼け対策は万全ですか？。");
                 break;
             }
             case "E": {
