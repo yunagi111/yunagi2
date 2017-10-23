@@ -191,14 +191,14 @@ public class KitchenSinkController {
     
    private void push() {
         TextMessage textMessage = new TextMessage("hello");
-        PushMessage pushMessage = new PushMessage(
-                "U39a1544457d27d31218a298b0dc9c705",
-                textMessage
-        );
+//         PushMessage pushMessage = new PushMessage(
+//                 "U39a1544457d27d31218a298b0dc9c705",
+//                 textMessage
+//         );
         try {
             BotApiResponse response =
                     lineMessagingClient
-                            .pushMessage(new PushMessage(replyToken, messages))
+                            .pushMessage(new PushMessage("U39a1544457d27d31218a298b0dc9c705", textMessage))
                             .get();
             log.info("Sent messages: {}", apiResponse);
             } catch (InterruptedException | ExecutionException e) {
