@@ -217,10 +217,31 @@ public class KitchenSinkController {
         this.reply(replyToken, new TextMessage(message));
     }
     
-    private void push(@NonNull String to, @NonNull Message message) {
-        push(to, Collections.singletonList(message));
-    }
-
+//     private void push(@NonNull String to, @NonNull Message message) {
+//         push(to, Collections.singletonList(message));
+//     }
+    
+//     private void push(@NonNull String to, @NonNull List<Message> messages) {
+//         try {
+//             BotApiResponse apiResponse = lineMessagingClient
+//                     .pushMessage(new pushMessage(to, messages))
+//                     .get();
+//             log.info("Sent messages: {}", apiResponse);
+//         } catch (InterruptedException | ExecutionException e) {
+//             throw new RuntimeException(e);
+//         }
+//     }
+    
+//     private void pushText(@NonNull String to, @NonNull String message) {
+//         if (to.isEmpty()) {
+//             throw new IllegalArgumentException("to must not be empty");
+//         }
+//         if (message.length() > 1000) {
+//             message = message.substring(0, 1000 - 2) + "……";
+//         }
+//         this.push(to, new TextMessage(message));
+//     }
+    
     private void handleHeavyContent(String replyToken, String messageId,
                                     Consumer<MessageContentResponse> messageConsumer) {
         final MessageContentResponse response;
@@ -234,6 +255,12 @@ public class KitchenSinkController {
         messageConsumer.accept(response);
     }
 
+    private void handleSticker(String replyToken, StickerMessageContent content) {
+        reply(replyToken, new StickerMessage(
+                content.getPackageId(), content.getStickerId())
+        );
+    }
+    
     private void handleSticker(String replyToken, StickerMessageContent content) {
         reply(replyToken, new StickerMessage(
                 content.getPackageId(), content.getStickerId())
