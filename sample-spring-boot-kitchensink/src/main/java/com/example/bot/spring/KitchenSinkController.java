@@ -196,7 +196,7 @@ public class KitchenSinkController {
                 textMessage
         );
         try {
-            Response<BotApiResponse> response =
+            BotApiResponse response =
                     LineMessagingServiceBuilder
                             .create("jLq6as2mLlCY0l36wG7QxKb1wVNZvqFj9j0PPfoZfXKZysJvaaDw49JftJzBejNwdB04t89/1O/w1cDnyilFU=")
                             .build()
