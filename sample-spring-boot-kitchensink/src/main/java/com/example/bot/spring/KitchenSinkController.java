@@ -254,6 +254,9 @@ public class KitchenSinkController {
     private void handleTextContent(String replyToken, Event event, TextMessageContent content)
             throws Exception {
         String text = content.getText();
+        if(text==null){
+            text="null";
+        }
 
         log.info("Got text message from {}: {}", replyToken, text);
         switch (text) {
@@ -283,6 +286,19 @@ public class KitchenSinkController {
                 break;
             }
             case "bye": {
+                Source source = event.getSource();
+                if (source instanceof GroupSource) {
+                    this.replyText(replyToken, "Leaving group");
+                    lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
+                } else if (source instanceof RoomSource) {
+                    this.replyText(replyToken, "Leaving room");
+                    lineMessagingClient.leaveRoom(((RoomSource) source).getRoomId()).get();
+                } else {
+                    this.replyText(replyToken, "Bot can't leave from 1:1 chat");
+                }
+                break;
+            }
+            case "null": {
                 Source source = event.getSource();
                 if (source instanceof GroupSource) {
                     this.replyText(replyToken, "Leaving group");
