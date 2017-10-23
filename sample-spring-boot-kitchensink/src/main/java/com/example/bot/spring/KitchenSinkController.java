@@ -200,7 +200,7 @@ public class KitchenSinkController {
                     lineMessagingClient
                             .pushMessage(new PushMessage("U39a1544457d27d31218a298b0dc9c705", textMessage))
                             .get();
-            log.info("Sent messages: {}", apiResponse);
+            log.info("Sent messages: {}", response);
             } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
         }
