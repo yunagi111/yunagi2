@@ -189,7 +189,7 @@ public class KitchenSinkController {
         log.info("Received message(Ignored): {}", event);
     }
     
-    private void push() {
+   private void push() {
         TextMessage textMessage = new TextMessage("hello");
         PushMessage pushMessage = new PushMessage(
                 "U39a1544457d27d31218a298b0dc9c705",
@@ -197,12 +197,10 @@ public class KitchenSinkController {
         );
         try {
             BotApiResponse response =
-                    LineMessagingServiceBuilder
-                            .create("jLq6as2mLlCY0l36wG7QxKb1wVNZvqFj9j0PPfoZfXKZysJvaaDw49JftJzBejNwdB04t89/1O/w1cDnyilFU=")
-                            .build()
-                            .pushMessage(pushMessage)
-                            .execute();
-            System.out.println(response.code() + " " + response.message());
+                    lineMessagingClient
+                            .pushMessage(new PushMessage(replyToken, messages))
+                            .get();
+            log.info("Sent messages: {}", apiResponse);
             } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
         }
