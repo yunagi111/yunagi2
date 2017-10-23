@@ -262,9 +262,20 @@ public class KitchenSinkController {
     }
     
     private void handleSticker(String replyToken, StickerMessageContent content) {
-        reply(replyToken, new StickerMessage(
-                content.getPackageId(), content.getStickerId())
+       TextMessage textMessage = new TextMessage("hello");
+        PushMessage pushMessage = new PushMessage(
+        "<to>",
+        textMessage
         );
+
+        Response<BotApiResponse> response =
+        LineMessagingServiceBuilder
+        .create("<channel access token>")
+        .build()
+        .pushMessage(pushMessage)
+        .execute();
+        System.out.println(response.code() + " " + response.message());
+
     }
 
     private void handleTextContent(String replyToken, Event event, TextMessageContent content)
