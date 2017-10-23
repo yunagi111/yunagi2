@@ -195,14 +195,17 @@ public class KitchenSinkController {
                 "U39a1544457d27d31218a298b0dc9c705",
                 textMessage
         );
-
-        Response<BotApiResponse> response =
-                LineMessagingServiceBuilder
-                        .create("jLq6as2mLlCY0l36wG7QxKb1wVNZvqFj9j0PPfoZfXKZysJvaaDw49JftJzBejNwdB04t89/1O/w1cDnyilFU=")
-                        .build()
-                        .pushMessage(pushMessage)
-                        .execute();
-        System.out.println(response.code() + " " + response.message());
+        try {
+            Response<BotApiResponse> response =
+                    LineMessagingServiceBuilder
+                            .create("jLq6as2mLlCY0l36wG7QxKb1wVNZvqFj9j0PPfoZfXKZysJvaaDw49JftJzBejNwdB04t89/1O/w1cDnyilFU=")
+                            .build()
+                            .pushMessage(pushMessage)
+                            .execute();
+            System.out.println(response.code() + " " + response.message());
+            } catch (InterruptedException | ExecutionException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
