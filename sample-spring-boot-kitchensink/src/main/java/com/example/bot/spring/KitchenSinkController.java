@@ -28,9 +28,6 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
 
 import com.linecorp.bot.model.action.DatetimePickerAction;
 import com.linecorp.bot.model.message.template.*;
@@ -42,7 +39,6 @@ import com.google.common.io.ByteStreams;
 import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.client.MessageContentResponse;
 import com.linecorp.bot.model.ReplyMessage;
-import com.linecorp.bot.model.PushMessage;
 import com.linecorp.bot.model.action.MessageAction;
 import com.linecorp.bot.model.action.PostbackAction;
 import com.linecorp.bot.model.action.URIAction;
@@ -216,32 +212,7 @@ public class KitchenSinkController {
         }
         this.reply(replyToken, new TextMessage(message));
     }
-    
-//     private void push(@NonNull String to, @NonNull Message message) {
-//         push(to, Collections.singletonList(message));
-//     }
-    
-//     private void push(@NonNull String to, @NonNull List<Message> messages) {
-//         try {
-//             BotApiResponse apiResponse = lineMessagingClient
-//                     .pushMessage(new pushMessage(to, messages))
-//                     .get();
-//             log.info("Sent messages: {}", apiResponse);
-//         } catch (InterruptedException | ExecutionException e) {
-//             throw new RuntimeException(e);
-//         }
-//     }
-    
-//     private void pushText(@NonNull String to, @NonNull String message) {
-//         if (to.isEmpty()) {
-//             throw new IllegalArgumentException("to must not be empty");
-//         }
-//         if (message.length() > 1000) {
-//             message = message.substring(0, 1000 - 2) + "……";
-//         }
-//         this.push(to, new TextMessage(message));
-//     }
-    
+
     private void handleHeavyContent(String replyToken, String messageId,
                                     Consumer<MessageContentResponse> messageConsumer) {
         final MessageContentResponse response;
@@ -259,23 +230,6 @@ public class KitchenSinkController {
         reply(replyToken, new StickerMessage(
                 content.getPackageId(), content.getStickerId())
         );
-    }
-    
-    private void handleSticker(String replyToken, StickerMessageContent content) {
-       TextMessage textMessage = new TextMessage("hello");
-        PushMessage pushMessage = new PushMessage(
-        "<to>",
-        textMessage
-        );
-
-        Response<BotApiResponse> response =
-        LineMessagingServiceBuilder
-        .create("<channel access token>")
-        .build()
-        .pushMessage(pushMessage)
-        .execute();
-        System.out.println(response.code() + " " + response.message());
-
     }
 
     private void handleTextContent(String replyToken, Event event, TextMessageContent content)
@@ -322,107 +276,8 @@ public class KitchenSinkController {
                 }
                 break;
             }
-            case "start": {
-            	int cnt = 0;
-            	String imageUrl = createUri("/static/buttons/1040.jpg");
-                String userId = event.getSource().getUserId();
-                for(cnt=0;cnt<40;cnt++){
-                	TimeUnit.SECONDS.sleep(1);
-                	if(cnt==5){
-                		this.push(userId, "7月に入りました");
-                	}else if(cnt==10){
-                		this.push(userId, "7月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate1 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}else if(cnt==15){
-                		this.push(userId, "7月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate2 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}else if(cnt==20){
-                		this.push(userId, "8月に入りました");
-                	}else if(cnt==25){
-                		this.push(userId, "8月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate3 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}else if(cnt==30){
-                		this.push(userId, "8月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate4 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}else if(cnt==35){
-                		this.push(userId, "8月の商品紹介です");
-                		ImageCarouselTemplate imageCarouselTemplate5 = new ImageCarouselTemplate(
-                                Arrays.asList(
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        ),
-                                        new ImageCarouselColumn(imageUrl,
-                                                new URIAction("Goto line.me",
-                                                        "https://line.me")
-                                        )
-                                ));
-                	}
-                }
-                break;
-            }
             case "A": {
-                this.replyText(replyToken, "まだまだ雨の続くじめじめとした季節ですが、いかがお過ごしでしょうか？");
+                this.replyText(replyToken, "7月にはいりました。");
                 break;
             }
             case "B": {
@@ -494,7 +349,7 @@ public class KitchenSinkController {
                 break;
             }
             case "D": {
-                this.replyText(replyToken, "梅雨も明け、いよいよ夏本番となってまいりましたが、日焼け対策は万全ですか？。");
+                this.replyText(replyToken, "8月にはいりました。");
                 break;
             }
             case "E": {
