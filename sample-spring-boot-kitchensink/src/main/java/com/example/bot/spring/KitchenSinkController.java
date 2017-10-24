@@ -88,12 +88,8 @@ public class KitchenSinkController {
 
     @EventMapping
     public void handleTextMessageEvent(MessageEvent<TextMessageContent> event) throws Exception {
-        if(event==null){
-            this.push();
-        }else{
             TextMessageContent message = event.getMessage();
             handleTextContent(event.getReplyToken(), event, message);
-        }
     }
 
     @EventMapping
