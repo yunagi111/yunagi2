@@ -193,25 +193,36 @@ public class KitchenSinkController {
         log.info("Received message(Ignored): {}", event);
     }
     
-   private void push() {
+    private void push(@NonNull Message message) {
+        push(Collections.singletonList(message));
+    }
+    
+   private void push(@NonNull List<Message> messages) {
 //        TextMessage textMessage = new TextMessage("hello");
 //         PushMessage pushMessage = new PushMessage(
 //                 "U39a1544457d27d31218a298b0dc9c705",
 //                 textMessage
 //         );
-        String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
-        String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
-       ImageMessage imageMessage = new ImageMessage(newRoyalUrl,higtUrl);
+//         String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+//         String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+//        ImageMessage imageMessage = new ImageMessage(newRoyalUrl,higtUrl);
         try {
             BotApiResponse response =
                     lineMessagingClient
-                            .pushMessage(new PushMessage("U39a1544457d27d31218a298b0dc9c705", imageMessage))
+                            .pushMessage(new PushMessage("U39a1544457d27d31218a298b0dc9c705", messages))
                             .get();
             log.info("Sent messages: {}", response);
             } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
         }
 
+    }
+    
+    private void pushText(@NonNull String message) {
+        if (message.length() > 1000) {
+            message = message.substring(0, 1000 - 2) + "……";
+        }
+        this.push(new TextMessage(message));
     }
 
     private void reply(@NonNull String replyToken, @NonNull Message message) {
@@ -289,18 +300,40 @@ public class KitchenSinkController {
                 }
                 break;
             }
-            case "bye": {
-                Source source = event.getSource();
-                if (source instanceof GroupSource) {
-                    this.replyText(replyToken, "Leaving group");
-                    lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
-                } else if (source instanceof RoomSource) {
-                    this.replyText(replyToken, "Leaving room");
-                    lineMessagingClient.leaveRoom(((RoomSource) source).getRoomId()).get();
-                } else {
-                    this.push();
-                }
-                break;
+            case "image": {
+               String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+               ImageMessage imageMessage = new ImageMessage(newRoyalUrl,newRoyalUrl);
+               push(imageMessage);
+               break;
+            }
+            case "video": {
+               String video = createUri("/static/buttons/ionkesho_cm.mp4");
+               String videoImage = createUri("/static/buttons/video.JPG");
+               VideoMessage videoMessage = new VideoMessage(video,videoImage);
+               push(videoMessage);
+               break;
+            }
+            case "audio": {
+               String video = createUri("/static/buttons/ionkesho_cm.mp4");
+               AudioMessage audioMessage = new AudioMessage(video,100);
+               push(audioMessage);
+               break;
+            }
+            case "location": {
+               String title = "my location";
+               String address = "〒150-0002 東京都渋谷区渋谷２丁目２１−１"; 
+               double latitude = 35.65910807942215;
+               double longitude = 139.70372892916203;
+               LocationMessage locationMessage = new LocationMessage(title, address, latitude, longitude);
+               push(locationMessage);
+               break;
+            }
+            case "sticker": {
+               String packageId = "1";
+               String stickerId = "1";
+               StickerMessage stickerMessage = new StickerMessage(packageId,stickerId);
+               push(stickerMessage);
+               break;
             }
             case "A": {
                 this.replyText(replyToken, "7月にはいりました。");
@@ -593,7 +626,7 @@ public class KitchenSinkController {
                         new MessageAction("No", "No!")
                 );
                 TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
-                this.reply(replyToken, templateMessage);
+                this.push(templateMessage);
                 break;
             }
             case "buttons": {
@@ -614,7 +647,7 @@ public class KitchenSinkController {
                                                   "Rice=米")
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
-                this.reply(replyToken, templateMessage);
+                this.push(templateMessage);
                 break;
             }
             case "carousel": {
@@ -661,7 +694,7 @@ public class KitchenSinkController {
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
-                this.reply(replyToken, templateMessage);
+                this.push(templateMessage);
                 break;
             }
             case "image_carousel": {
@@ -683,7 +716,7 @@ public class KitchenSinkController {
                                 )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text", imageCarouselTemplate);
-                this.reply(replyToken, templateMessage);
+                this.push(templateMessage);
                 break;
             }
             case "imagemap":
