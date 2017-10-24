@@ -199,10 +199,13 @@ public class KitchenSinkController {
 //                 "U39a1544457d27d31218a298b0dc9c705",
 //                 textMessage
 //         );
+        String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+        String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+       ImageMessage imageMessage = new ImageMessage(newRoyalUrl,higtUrl);
         try {
             BotApiResponse response =
                     lineMessagingClient
-                            .pushMessage(new PushMessage("U39a1544457d27d31218a298b0dc9c705", textMessage))
+                            .pushMessage(new PushMessage("U39a1544457d27d31218a298b0dc9c705", imageMessage))
                             .get();
             log.info("Sent messages: {}", response);
             } catch (InterruptedException | ExecutionException e) {
