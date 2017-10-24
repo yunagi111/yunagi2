@@ -589,7 +589,7 @@ public class KitchenSinkController {
                 break;
             }
             case "D": {
-                this.replyText(replyToken, "8月にはいりました。");
+                this.replyText(replyToken, "梅雨もあけ、いよいよ夏本番となってまいりましたが、日焼け対策はちゃんと行っていますか？");
                 break;
             }
             case "E": {
@@ -641,7 +641,7 @@ public class KitchenSinkController {
                double latitude = 35.65910807942215;
                double longitude = 139.70372892916203;
                LocationMessage locationMessage = new LocationMessage(title, address, latitude, longitude);
-               this.pushText("コンテストのお知らせ\n9月に行われるコンテストの場所が決定いたしました。奮ってご参加ください。");
+               this.pushText("コンテストのお知らせ\n9月に行われるコンテストの場所が決定いたしました。\n奮ってご参加ください。");
                push(locationMessage);
                break;
             }
