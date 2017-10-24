@@ -127,7 +127,7 @@ public class KitchenSinkController {
                             jpg.path.toString(),
                             previewImg.path.toString());
                     reply(((MessageEvent) event).getReplyToken(),
-                          new ImageMessage(jpg.getUri(), jpg.getUri()));
+                          new ImageMessage(jpg.getUri(), previewImg.getUri()));
                 });
     }
 
@@ -194,7 +194,7 @@ public class KitchenSinkController {
     }
     
    private void push() {
-        TextMessage textMessage = new TextMessage("hello");
+//        TextMessage textMessage = new TextMessage("hello");
 //         PushMessage pushMessage = new PushMessage(
 //                 "U39a1544457d27d31218a298b0dc9c705",
 //                 textMessage
