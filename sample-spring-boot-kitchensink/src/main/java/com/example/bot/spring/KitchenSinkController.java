@@ -170,8 +170,12 @@ public class KitchenSinkController {
         String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
         String video = createUri("/static/buttons/ionkesho_cm.mp4");
         String videoImage = createUri("/static/buttons/video.JPG");
-        this.replyText(replyToken, "じめじめとした日が続いていますがいかがお過ごしですか？");
-        TimeUnit.SECONDS.sleep(10);
+        this.pushText("じめじめとした日が続いていますがいかがお過ごしですか？");
+        try {
+                    TimeUnit.SECONDS.sleep(10);
+         } catch (InterruptedException e) {
+                    e.printStackTrace();
+        }
         this.pushText("梅雨の時期にぴったりな商品を紹介します！");
                 CarouselTemplate carouselTemplate1 = new CarouselTemplate(
                         Arrays.asList(
@@ -197,15 +201,21 @@ public class KitchenSinkController {
                                       
                                 ))
                             ));
-        TemplateMessage templateMessage1 = new TemplateMessage("Carousel alt text", carouselTemplate);
-        push(templateMessage);
-        TimeUnit.SECONDS.sleep(10);
-        VideoMessage videoMessage = new VideoMessage(video,videoImage);
+        TemplateMessage templateMessage1 = new TemplateMessage("Carousel alt text", carouselTemplate1);
+        push(templateMessage1);
+        try {
+                    TimeUnit.SECONDS.sleep(10);
+         } catch (InterruptedException e) {
+                    e.printStackTrace();
+        }        VideoMessage videoMessage = new VideoMessage(video,videoImage);
         this.pushText("新しいCMが公開されました！");
         push(videoMessage);
-        this.pushText(replyToken, "梅雨もあけ、いよいよ夏本番となってまいりましたが、日焼け対策はちゃんと行っていますか？");
-        TimeUnit.SECONDS.sleep(10);
-        this.pushText("夏の暑い時期にぴったりな商品を紹介します！");
+        this.pushText("梅雨もあけ、いよいよ夏本番となってまいりましたが、日焼け対策はちゃんと行っていますか？");
+        try {
+                    TimeUnit.SECONDS.sleep(10);
+         } catch (InterruptedException e) {
+                    e.printStackTrace();
+        }        this.pushText("夏の暑い時期にぴったりな商品を紹介します！");
         CarouselTemplate carouselTemplate2 = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
@@ -230,10 +240,13 @@ public class KitchenSinkController {
                                         
                                 ))
                             ));
-        TemplateMessage templateMessage2 = new TemplateMessage("Carousel alt text", carouselTemplate);
-        push(templateMessage);
-        TimeUnit.SECONDS.sleep(10);
-        String title = "コンテスト会場";
+        TemplateMessage templateMessage2 = new TemplateMessage("Carousel alt text", carouselTemplate2);
+        push(templateMessage2);
+        try {
+                    TimeUnit.SECONDS.sleep(10);
+         } catch (InterruptedException e) {
+                    e.printStackTrace();
+        }        String title = "コンテスト会場";
         String address = "〒150-0002 東京都渋谷区渋谷２丁目２１−１"; 
         double latitude = 35.65910807942215;
         double longitude = 139.70372892916203;
