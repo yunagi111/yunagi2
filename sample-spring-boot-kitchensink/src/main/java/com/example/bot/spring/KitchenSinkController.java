@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
+import java.util.concurrent.TimeUnit;
 
 import com.linecorp.bot.model.action.DatetimePickerAction;
 import com.linecorp.bot.model.message.template.*;
@@ -162,16 +163,84 @@ public class KitchenSinkController {
 
      @EventMapping
     public void handleFollowEvent(FollowEvent event) {
-        String replyToken = event.getReplyToken();
-        //this.replyText(replyToken, "アンケートを実施します");
+        String newRoyalUrl = createUri("/static/buttons/21jO3NZSEZL.jpg");
+        String higtUrl = createUri("/static/buttons/11hcgYLUWPL.jpg");
+        String softUrl = createUri("/static/buttons/11jKc29jgaL.jpg");
+        String successUrl = createUri("/static/buttons/11VjyV6RZDL.jpg");
+        String peeressUrl = createUri("/static/buttons/21ij1JnxCGL.jpg");
+        String video = createUri("/static/buttons/ionkesho_cm.mp4");
+        String videoImage = createUri("/static/buttons/video.JPG");
+        this.replyText(replyToken, "じめじめとした日が続いていますがいかがお過ごしですか？");
+        TimeUnit.SECONDS.sleep(10);
+        this.pushText("梅雨の時期にぴったりな商品を紹介します！");
+                CarouselTemplate carouselTemplate1 = new CarouselTemplate(
+                        Arrays.asList(
+                                new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                        
+                                )),
+                                 new CarouselColumn(softUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/lotion02.html")
+                                        
+                                )),
+                               new CarouselColumn(successUrl, "薬用サクセスストーリー", "ダイズエキス・ローヤルゼリーエキス・ヒアルロン酸をベースに、天然保湿成分を加えた弱酸性の薬用化粧品。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/white01.html")
+                                      
+                                ))
+                            ));
+        TemplateMessage templateMessage1 = new TemplateMessage("Carousel alt text", carouselTemplate);
+        push(templateMessage);
+        TimeUnit.SECONDS.sleep(10);
+        VideoMessage videoMessage = new VideoMessage(video,videoImage);
+        this.pushText("新しいCMが公開されました！");
+        push(videoMessage);
+        this.pushText(replyToken, "梅雨もあけ、いよいよ夏本番となってまいりましたが、日焼け対策はちゃんと行っていますか？");
+        TimeUnit.SECONDS.sleep(10);
+        this.pushText("夏の暑い時期にぴったりな商品を紹介します！");
+        CarouselTemplate carouselTemplate2 = new CarouselTemplate(
+                        Arrays.asList(
+                                new CarouselColumn(peeressUrl, "薬用ピアレス　スプリーム", "つやつやと潤い豊かな素肌をもたらします。特に温泉蒸しタオル美容におすすめの弱酸性クリームです。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream05.html")
+                                        
+                                )),
+                                new CarouselColumn(softUrl, "ソフトローション", "お肌に潤いを与え女性特有のデリケートなお肌にも優しくなじみ、しっとり感も長く保つ保湿力のある化粧水です。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/lotion02.html")
+                                        
+                                )),
+                               new CarouselColumn(newRoyalUrl, "ニューロイヤル", "イオン化粧品独自の温泉蒸しタオル美容に欠かせないアイテム。蒸しタオルによって、成分がなじみ、きめの整った素肌へ導きます。", Arrays.asList(
+                                        new URIAction("電話をかける",
+                                                      "tel:090XXXX6238"),
+                                        new URIAction("商品ページ",
+                                                "http://www.ionkesho.jp/products/list/cream01.html")
+                                        
+                                ))
+                            ));
+        TemplateMessage templateMessage2 = new TemplateMessage("Carousel alt text", carouselTemplate);
+        push(templateMessage);
+        TimeUnit.SECONDS.sleep(10);
+        String title = "コンテスト会場";
+        String address = "〒150-0002 東京都渋谷区渋谷２丁目２１−１"; 
+        double latitude = 35.65910807942215;
+        double longitude = 139.70372892916203;
+        LocationMessage locationMessage = new LocationMessage(title, address, latitude, longitude);
+        this.pushText("コンテストのお知らせ\n9月に行われるコンテストの場所が決定いたしました。\n奮ってご参加ください。");
+        push(locationMessage);
 
-        ConfirmTemplate confirmTemplate = new ConfirmTemplate(
-                "アンケートをはじめてもよろしいですか?\n",
-                new MessageAction("OK", "OK"),
-                new MessageAction("NO", "NO")
-        );
-        TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
-      this.reply(replyToken, templateMessage);
     }
 
     @EventMapping
@@ -275,174 +344,9 @@ public class KitchenSinkController {
 
     private void handleTextContent(String replyToken, Event event, TextMessageContent content)
             throws Exception {
-        String Ans1="test1";
-        String Ans2="test2";
-        String text = content.getText();
-       
+        String text = content.getText();       
         log.info("Got text message from {}: {}", replyToken, text);
         switch (text) {
-            case "OK":
-            case "いいえ":
-            case "質問1":
-            {
-                ConfirmTemplate confirmTemplate = new ConfirmTemplate(
-                    "質問1:\n最近の肌の悩みは何ですか?\n",
-                        new MessageAction("肌の悩み", "肌の悩み"),
-                        new MessageAction("肌の老化", "肌の老化")
-                );
-                TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
-              this.reply(replyToken, templateMessage);
-
-                break;
-            }
-
-            case "NO":
-            {
-                this.replyText(replyToken,"アンケートを開始されたい場合は「アンケート」と入力してください");
-                break;
-            }
-
-
-
-            case "肌の悩み": {
-                  String imageUrl = createUri("/static/buttons/ionsoap.png");
-                  String imageUrl2 = createUri("/static/buttons/takai.png");
-                  String imageUrl3 = createUri("/static/buttons/imagetop.png");
-                  CarouselTemplate carouselTemplatea = new CarouselTemplate
-                        (
-                                Arrays.asList
-                            (
-                                  new CarouselColumn(imageUrl, "ニキビ", "質問1", Arrays.asList(
-                                          new MessageAction("ニキビ",
-                                                        "ニキビ")
-                                )),
-                                  new CarouselColumn(imageUrl2, "年齢肌", "質問1", Arrays.asList(
-                                          new MessageAction("年齢肌",
-                                                             "年齢肌")
-                                )),
-                                  new CarouselColumn(imageUrl3, "脂性肌", "質問1", Arrays.asList(
-                                          new MessageAction("脂性肌",
-                                                            "脂性肌")
-                     ))
-               ));
-                  TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplatea);
-                  this.reply(replyToken, templateMessage);
-                  break;
-            }
-
-
-
-            case "肌の老化":
-            {
-                  String imageUrl = createUri("/static/buttons/item1.png");
-                  String imageUrl2 = createUri("/static/buttons/takai.png");
-                  String imageUrl3 = createUri("/static/buttons/highlotion.png");
-                  CarouselTemplate carouselTemplate = new CarouselTemplate
-                        (
-                                Arrays.asList
-                            (
-                                  new CarouselColumn(imageUrl, "ハリ", "質問1", Arrays.asList(
-                                          new MessageAction("ハリ",
-                                                        "ハリ")
-                                )),
-                                  new CarouselColumn(imageUrl2, "乾燥肌", "質問1", Arrays.asList(
-                                          new MessageAction("乾燥肌",
-                                                             "乾燥肌")
-                                )),
-                                  new CarouselColumn(imageUrl3, "毛穴", "質問1", Arrays.asList(
-                                          new MessageAction("毛穴",
-                                                            "毛穴")
-                     ))
-                ));
-                  TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
-                  this.reply(replyToken, templateMessage);
-                  break;
-            }
-
-
-            case "ニキビ":
-            case "乾燥肌":
-            case "脂性肌":
-            case "年齢肌":
-            case "ハリ":
-            case "毛穴":
-            case "質問2":
-            {
-                Ans1=text;
-                 String imageUrl = createUri("/static/buttons/LINEsuteppu2.png");
-                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
-                         imageUrl,
-                         "質問2:",
-                         "化粧品は商品購入したときから約何日後に使い切りますか?",
-                         Arrays.asList(
-                                 new MessageAction("約10日後",
-                                                    "約10日後"),
-                                 new MessageAction("約20日後",
-                                                    "約20日後"),
-                                 new MessageAction("約1ヵ月後",
-                                                   "約1ヶ月後"),
-                                 new MessageAction("1ヶ月以上",
-                                                "1ヶ月以上")
-                         ));
-                 TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
-                 this.reply(replyToken, templateMessage);
-                 break;
-            }
-
-
-            case "約10日後":
-            case "1ヶ月以上":
-            case "約20日後":
-            case "約1ヶ月後":
-            {
-                Ans2=text;
-
-                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
-                         "質問3:\nニュースを配信してもよろしいですか??",
-                         new MessageAction("ハイ", "ここで時間を入力します"),
-                         new MessageAction("イイエ", "イイエ")
-                 );
-                 TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
-               this.reply(replyToken, templateMessage);
-               break;
-            }
-
-            case "ここで時間を入力します":
-            case "イイエ":
-            {
-
-                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
-                         "回答はよろしいでしょうか?",
-                         new MessageAction("はい", "はい"),
-                         new MessageAction("変更する", "変更する")
-                 );
-                 TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
-               this.reply(replyToken, templateMessage);
-
-                 break;
-            }
-
-            case "はい":
-            {
-                this.replyText(replyToken,"ご回答して頂きありがとうございました!\n"
-                        + "今回ご回答頂いた情報を元にお客様へ情報を発信していきますのでよろしくおねがいします!");
-                break;
-            }
-
-
-            case "変更する":
-            {
-
-                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
-                         "どちらから変更しますか?\n",
-                             new MessageAction("質問1", "質問1"),
-                             new MessageAction("質問2", "質問2")
-                         );
-                 TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
-               this.reply(replyToken, templateMessage);
-
-                 break;
-            }
             case "profile": {
                 String userId = event.getSource().getUserId();
                 if (userId != null) {
